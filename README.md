@@ -23,13 +23,9 @@ Our approach is a hybrid of Classical NLP and Rule-Based Extraction:
 We received valuable insights from senior data scientists regarding our performance relative to the leaderboard.
 
 ### ✅ What We Did Right: Efficiency Over Complexity
-> *"Most of the ~44% error scores were from different BERT type models..."*
-
 Many participants tried to throw heavy Transformer models (DeBERTa, Electra) at the problem, often achieving error scores around **44%**. Our solution achieved a **SMAPE score of 48**, demonstrating that domain-specific feature engineering combined with efficient GBDT (Gradient Boosting) provides a strong alternative to heavy deep learning models with a fraction of the compute time. We effectively demonstrated that **understanding the data** (e.g., *16GB RAM is worth more than 8GB*) is often more valuable than generic semantic embeddings for pricing tasks.
 
 ### ⚠️ Mistakes & Future Improvements: The Ensemble Gap
-> *"Above that there was scores depending on ensemble techniques. The more models the better (missed out on that myself) but still got to 42-42.5.*"
-
 **Our Mistake:** We relied too heavily on a single, well-tuned LightGBM model.
 **The Lesson:** While our single-model approach was efficient and "pretty good," breaking the ceiling to reach the top-tier error rates (**42-42.5%**) requires **Ensembling**.
 To improve further, we should have:
